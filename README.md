@@ -1,17 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WS
+const WebSocket = require("ws");
+
+const createSocket = endpoint => {
+    return new WebSocket(`ws://${host}:${port}/${endpoint}?password=${password}`);
+};
+
+const socket = createSocket("socket/player/song");
+socket.onmessage = message => {
+    const data = JSON.parse(message.data);
+    console.log(data);
+};
 
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `yarn install`
-
-Instal All dependencies in this project
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
